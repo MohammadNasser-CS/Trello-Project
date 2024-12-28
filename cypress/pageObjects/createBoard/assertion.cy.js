@@ -1,7 +1,7 @@
 class CreateBoardAssertions {
 
     checkBoardNameIsContain(boardName) {
-        cy.findByTestId("board-name-input").should("have.value", boardName)
+        cy.findByDataTestId("board-name-input").should("have.value", boardName)
         return this;
     }
 }

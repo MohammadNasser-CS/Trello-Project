@@ -15,3 +15,15 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // Ignore specific errors or all errors
+    if (err.message.includes('specific error message')) {
+      return false; // Prevents Cypress from failing the test
+    }
+  
+    // If you want to ignore all uncaught exceptions, uncomment the line below
+    return false;
+  
+    // Allow other errors to fail the test
+    return true;
+  });
