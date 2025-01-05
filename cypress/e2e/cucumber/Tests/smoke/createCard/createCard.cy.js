@@ -1,9 +1,9 @@
 /// <reference types ="cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import DataUtils from "../../../../support/datautils.cy";
-import CreateCardActions from "../../../../pageObjects/createCard/actions.cy";
-import CreateCardAssertions from "../../../../pageObjects/createCard/assertions.cy";
+import DataUtils from "../../../../../support/datautils.cy";
+import CreateCardActions from "../../../../../pageObjects/createCard/actions.cy";
+import CreateCardAssertions from "../../../../../pageObjects/createCard/assertions.cy";
 
 
 const boardName = "My-Project"

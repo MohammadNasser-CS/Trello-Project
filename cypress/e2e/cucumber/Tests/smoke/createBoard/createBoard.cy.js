@@ -1,6 +1,6 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import CreateBoardActions from "../../../../pageObjects/createBoard/actions.cy";
-import CreateBoardAssertions from "../../../../pageObjects/createBoard/assertion.cy";
+import CreateBoardActions from "../../../../../pageObjects/createBoard/actions.cy";
+import CreateBoardAssertions from "../../../../../pageObjects/createBoard/assertion.cy";
 
 const createBoardAction = new CreateBoardActions();
 const createBoardAssertion = new CreateBoardAssertions();

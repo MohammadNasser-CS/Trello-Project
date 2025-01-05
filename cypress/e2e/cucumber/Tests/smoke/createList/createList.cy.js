@@ -1,9 +1,9 @@
 /// <reference types ="cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import DataUtils from "../../../../support/datautils.cy";
-import CreateListActions from "../../../../pageObjects/createList/actions.cy";
-import CreateListAssertions from "../../../../pageObjects/createList/assertions.cy";
+import DataUtils from "../../../../../support/datautils.cy";
+import CreateListActions from "../../../../../pageObjects/createList/actions.cy";
+import CreateListAssertions from "../../../../../pageObjects/createList/assertions.cy";
 
 
 const boardName = "Board-Name"
