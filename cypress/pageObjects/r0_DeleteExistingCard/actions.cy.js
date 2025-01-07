@@ -27,7 +27,7 @@ class DeleteCardActions {
         cy.findByDataTestId("popover-close").first().click()
         return this;
     }
-    clickOnCloseCardButton() {
+    clickOnCloseCardDetailsButton() {
         cy.findByDataTestId("CloseIcon").first().click()
         return this;
     }

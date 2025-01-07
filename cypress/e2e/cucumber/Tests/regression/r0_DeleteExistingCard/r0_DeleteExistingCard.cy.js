@@ -55,7 +55,7 @@ When("The user does not Confirms the Delete action", () => {
     deleteCardAction.clickOnCloseConfirmationDeletionButton();
 });
 When("The user clicks the Close button", () => {
-    deleteCardAction.clickOnCloseCardButton();
+    deleteCardAction.clickOnCloseCardDetailsButton();
 });
 When("The user clicks the Show More button", () => {
     deleteCardAction.clickOnShowMoreButton();
