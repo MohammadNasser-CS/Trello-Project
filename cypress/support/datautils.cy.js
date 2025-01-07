@@ -12,8 +12,8 @@ class DataUtils {
     getBoardLists = (boardId) => {
         return cy.request("GET", `https://api.trello.com/1/boards/${boardId}/lists?key=${APIKey}&token=${APIToken}`)
     }
-    createCard = (listId, cardName) => {
-        return cy.request("POST", `https://api.trello.com/1/cards?idList=${listId}&key=${APIKey}&token=${APIToken}&name=${cardName}`);
+    createCard = (listId, cardName, isTemplate = false) => {
+        return cy.request("POST", `https://api.trello.com/1/cards?idList=${listId}&key=${APIKey}&token=${APIToken}&name=${cardName}&isTemplate=${isTemplate}`);
     }
 }
 export default DataUtils;
