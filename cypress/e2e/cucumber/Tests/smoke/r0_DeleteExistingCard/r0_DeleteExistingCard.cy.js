@@ -38,6 +38,8 @@ before(() => {
 
 Given("The user navigate to the board", () => {
     deleteCardAction.openBoard(boardUrl)
+    cy.wait(3000);
+    cy.screenshot({ capture: "runner" });
 });
 
 When("The user clicks on the card", () => {
@@ -59,6 +61,7 @@ When("The user clicks the Show More button", () => {
 });
 When("The user clicks the Archived Items button", () => {
     deleteCardAction.clickOnArchivedItemsButton();
+    cy.wait(2000)
 });
 
 Then("The card will no longer appear in the Archived Items list", () => {

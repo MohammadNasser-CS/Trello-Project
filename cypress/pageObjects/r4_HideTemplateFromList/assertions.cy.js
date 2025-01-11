@@ -2,7 +2,7 @@ class HideTemplateFromListAssertions {
     verifyTemplateNotAppearsTheList(destinationIndex, templateName) {
         cy.findByDataTestId("list")
             .eq(destinationIndex)
-            .findByDataTestId("card-name").should("not.exist", 'Custom message: Template with name "${templateName}" does not exist.')
+            .findByDataTestId("card-name").should("not.exist", `Custom message: Template with name "${templateName}" does not exist.`)
             .then((cardElements) => {
                 if (cardElements===null) {
                     expect(true, `Template with name "${templateName}" does not exist.`).to.be.true;
