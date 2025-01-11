@@ -1,3 +1,4 @@
+@smokeTest
 Feature: Create List in trello website
 
     Scenario: Validate that the user can create a new list

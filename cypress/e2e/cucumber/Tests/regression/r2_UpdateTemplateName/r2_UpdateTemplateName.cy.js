@@ -7,7 +7,7 @@ import UpdateTemplateNameAssertions from "../../../../../pageObjects/r2_UpdateTe
 
 const boardName = "TestBoard";
 const templateName = "myTemplate";
-const newTemplateName = "myTemplate";
+const newTemplateName = "myNewTemplate";
 let boardUrl, boardId, boardsList;
 
 const dataUtil = new DataUtils();
@@ -49,14 +49,19 @@ When("The user clicks on the edit icon button", () => {
     updateTemplateNameAction.clickEditIconButton();
 });
 
+When("The user edits the template name", () => {
+    updateTemplateNameAction.editTemplateName(newTemplateName);
+});
+
 When("The user edits the template name with empty value", () => {
     updateTemplateNameAction.editTemplateName("");
 });
+Then("The updated name will be displayed in the card template header", () => {
+    updateTemplateNameAssertion.verifyUpdatedNameIsDisplayed(newTemplateName);
+});
 Then("The previos name will be displayed in the card template header", () => {
     updateTemplateNameAssertion.verifyUpdatedNameIsDisplayed(templateName);
-    cy.pause();
 });
-
 after(() => {
     cy.wait(3000)
     dataUtil.deleteBoard(boardId)

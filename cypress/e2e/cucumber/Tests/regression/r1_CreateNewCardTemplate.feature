@@ -1,6 +1,5 @@
 @regressionTest
 Feature: Create a card template on Trello website
-    @focus
     Scenario: Successfully create a new card template
         Given The user navigate to the board
         When The user clicks on the card template list button
